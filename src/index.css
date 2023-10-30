@@ -1,0 +1,35 @@
+
+body{
+    background-color: rgb(52, 42, 57);
+    overflow-x: hidden;
+    cursor: none;
+  }
+  .App {
+    cursor: none;
+  }
+  .cursor-style {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    border: 1px solid blueviolet;
+    /* transform-origin: 100% 100%; */
+    transform: translate(10%, 10%);
+    position: fixed;
+    pointer-events: none;
+    z-index: 1;
+    
+  }
+  .inner-cursor-style{
+    height: .5rem;
+    width: .5rem;
+    border-radius: 100%;
+   background-color: beige;
+    transform: translate(150%, 130%);
+    position: fixed;
+    pointer-events: none;
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
