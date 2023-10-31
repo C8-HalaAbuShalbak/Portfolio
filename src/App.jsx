@@ -1,5 +1,6 @@
-import { useRef } from "react";
-import { useState } from "react";
+import React from "react";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { TypeAnimation } from "react-type-animation";
 function App() {
   const cursor = useRef(null);
@@ -9,9 +10,44 @@ function App() {
   const [Ycoor, setYcoor] = useState(0);
   const [showAbout, setShowAbout] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
+  const [showContact, setShowcontact] = useState(false);
+  //contact//
+  const [msg, setMsg] = useState("");
 
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [thank, setThank] = useState(false);
+  const handleThankMsg = () => {
+    setThank(true);
+  };
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_j5381wl",
+        "template_c5evtcx",
+        form.current,
+        "OvNxWqM4ZNoMso80y"
+      )
+      .then(
+        (result) => {
+          setMsg("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setMsg("FAILED...");
+        }
+      );
+  };
+  //   contact //
   const hadleShowAbout = () => {
     setShowAbout(!showAbout);
+  };
+  const hadleShowContact = () => {
+    setShowcontact(!showContact);
   };
   const hadleShowProjects = () => {
     setShowProjects(!showProjects);
@@ -29,7 +65,6 @@ function App() {
     setXcoor(e.clientX);
     setYcoor(e.clientY);
   });
-  // console.log(Xcoor,Ycoor)
   return (
     <>
       <div
@@ -42,7 +77,6 @@ function App() {
           <span id="s3"></span>
           <span id="s5"></span>
           <span id="s7"></span>
-
           <span id="s2"></span>
           <span id="s1"></span>
           <span id="s3"></span>
@@ -82,16 +116,16 @@ function App() {
             {" "}
           </div>
         </div>
-        <nav className="flex items-center justify-evenly   p-8  font-semibold  md:font-light font-mono text-lg md:text-xl  text-purple-100 ">
-          <div className="w-full block justify-between flex-grow sm:flex sm:items-center sm:w-auto    ">
+        <nav className="flex items-center justify-evenly   p-8  font-semibold  md:font-light font-mono text-lg md:text-xl  text-purple-100 cursor-none ">
+          <div className="w-full block justify-between flex-grow sm:flex sm:items-center sm:w-auto  cursor-none   ">
             <div className="block mt-4 sm:inline-block sm:mt-0">logo</div>
-            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50  hover:animate-pulse">
+            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50  animate-pulse  hover:animate-none">
               <a href="#about">About</a>
             </div>{" "}
-            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 hover:animate-pulse ">
+            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none">
               <a href="#projects">Projects</a>
             </div>{" "}
-            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 hover:animate-pulse ">
+            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none">
               <a href="#about">Contact</a>
             </div>
           </div>
@@ -125,7 +159,7 @@ function App() {
                 wrapper="div"
                 speed={45}
                 deletionSpeed={45}
-                className="text-xl text-amber-200 font-semibold"
+                className="text-xl text-amber-200 font-semibold bg-black-950/50	  rounded-md"
                 repeat={Infinity}
               />
             )}
@@ -139,18 +173,18 @@ function App() {
           >
             My Projects{" "}
             {showProjects && (
-              <ul className=" flex gap-2 flex-col list-none text-xl text-yellow-200 ">
-                <li className="hover:tracking-widest">
+              <ul className=" flex gap-2 flex-col list-none text-xl text-yellow-200 cursor-none ">
+                <li className="hover:tracking-widest hover:text-yellow-300">
                   <a href="#p1">Test Your Memory</a>
                 </li>
-                <li className="hover:tracking-widest">
+                <li className="hover:tracking-widest  hover:text-yellow-300">
                   <a href="#p2">My Task Manager</a>
                 </li>
-                <li className="hover:tracking-widest">
+                <li className="hover:tracking-widest  hover:text-yellow-300">
                   {" "}
                   <a href="#p3">Easy Knowledge</a>
                 </li>
-                <li className="hover:tracking-widest">
+                <li className="hover:tracking-widest  hover:text-yellow-300">
                   {" "}
                   <a href="#p4">Cure App</a>
                 </li>
@@ -162,16 +196,113 @@ function App() {
           <ul
             className="rounded absolute font-mono text-left bottom-[3%]  left-20 text-purple-100 font-extrabold text-[1.5rem]   w-[40vw]"
             id="contact"
+            onClick={()=>{
+              hadleShowContact()
+              setThank(false)
+            }}
           >
-            Contact Me{" "}
+            <a href="#contactMe"> Contact Me </a>
           </ul>
         </aside>
-      </div>
-      <div
-        id="p1"
-        className=" ml-[25vw] grid-col-4 justify-center border-solid border-white w-full h-full "
-      >
-        <img src="public\p1.jpg" className="w-3/12 h-3/12"></img>
+        {showContact && (
+          <div
+            id="contactMe"
+            className="flex min-h-screen rounded-lg m-auto  items-center w-[50vw] justify-self-center justify-center bg-none text-white shadow-lg shadow-white cursor-none"
+          >
+            <div className="mx-auto w-full max-w-lg">
+              <p className="mt-1 mb-3 text-lg">
+                Email me at{" "}
+                <a
+                  className=" underline cursor-none"
+                  href="mailto:halaj.abushalbak@gmail.com"
+                >
+                  halaj.abushalbak@gmail.com
+                </a>{" "}
+                or message me here:
+              </p>
+              <h1 className="text-4xl font-medium">Contact Me</h1>
+
+              <form
+                action="https://api.web3forms.com/submit"
+                className="mt-10"
+                ref={form}
+                onSubmit={sendEmail}
+              >
+                
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div className="relative z-0">
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      className="peer block w-full appearance-none border-0 border-b border-gray-200 bg-transparent py-2.5 px-0  text-violet-100 text-lg focus:border-indigo-200 focus:outline-focus focus:ring-0 cursor-none"
+                      placeholder=" "
+                      onChange={(e) => {
+                        setName(e.target.value);
+                      }}
+                    />
+                    <label className="absolute top-0 -z-10 origin-[0] -translate-y-6 scale-0 transform text-md font-normal text-gray-100/75 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-yellow-400 peer-focus:dark:text-yellow-100">
+                      Your name
+                    </label>
+                  </div>
+                  <div className="relative z-0">
+                    <input
+                      type="text"
+                      name="email"
+                      required
+                      className="peer block w-full appearance-none border-0 border-b border-gray-200 bg-transparent py-2.5 px-0  text-violet-100 text-lg focus:border-indigo-200 focus:outline-focus focus:ring-0 cursor-none"
+                      placeholder=" "
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                      }}
+                    />
+                    <label className="absolute top-0 -z-10 origin-[0] -translate-y-6 scale-0 transform text-md font-normal text-gray-100/75 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-yellow-400 peer-focus:dark:text-yellow-100">
+                      Your email
+                    </label>
+                  </div>
+                  <div className="relative z-0 col-span-2">
+                    <textarea
+                      name="message"
+                      rows="5"
+                      
+                      className="peer block w-full appearance-none border-0 border-b border-gray-200 bg-transparent py-2.5 px-0  text-violet-100 text-lg focus:border-indigo-200 focus:outline-focus focus:ring-0 cursor-none"
+                      placeholder=" "
+                      onChange={(e) => {
+                        setMessage(e.target.value);
+                      }}
+                    ></textarea>
+                    <label className="absolute top-0 -z-10 origin-[0] -translate-y-6 scale-0 transform text-md font-normal text-gray-100/75 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-yellow-400 peer-focus:dark:text-yellow-100">
+                      Your message
+                    </label>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  value="Send"
+                  className="mt-5 rounded-md bg-black px-10 py-2 text-white cursor-none hover:shadow-md hover:shadow-white"
+                  onClick={handleThankMsg}
+                >
+                  Send Message
+                </button>
+                {thank&&name&&email&&<TypeAnimation
+                    sequence={[
+                      "setMessage(true)",
+                      1500,
+                      "{message ? <p> Thank you for contacting,your message was sent successfully </p> : <p> You are always welcome to share your thoughts </p>}",
+                      1500,
+                    ]}
+                    wrapper="div"
+                    speed={45}
+                    deletionSpeed={45}
+                    className="mt-3  text-lg text-emerald-400 font-normal bg-transparent"
+                    repeat={Infinity}
+                  />
+                  }
+              </form>
+          
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
