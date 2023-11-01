@@ -11,6 +11,8 @@ function App() {
   const [showAbout, setShowAbout] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [showContact, setShowcontact] = useState(false);
+  const [showp1, setShowp1] = useState(false);
+
   //contact//
   const [msg, setMsg] = useState("");
 
@@ -49,6 +51,11 @@ function App() {
   const hadleShowContact = () => {
     setShowcontact(!showContact);
   };
+  const handleShowp1=()=>{
+    setShowp1(!showp1)
+    console.log(showp1)
+
+  }
   const hadleShowProjects = () => {
     setShowProjects(!showProjects);
     console.log(showProjects);
@@ -116,36 +123,65 @@ function App() {
             {" "}
           </div>
         </div>
-        <nav className="flex items-center justify-evenly   p-8  font-semibold  md:font-light font-mono text-lg md:text-xl  text-purple-100 cursor-none ">
+        <nav className="flex items-center justify-evenly   p-8 font-semibold  md:font-light font-mono text-lg md:text-xl  text-purple-100 cursor-none border-b-2 border-indigo-50 ">
           <div className="w-full block justify-between flex-grow sm:flex sm:items-center sm:w-auto  cursor-none   ">
             <div className="block mt-4 sm:inline-block sm:mt-0">logo</div>
-            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50  animate-pulse  hover:animate-none">
+            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50  animate-pulse  hover:animate-none border-x p-2 rounded-md w-[10%] text-center">
               <a href="#about">About</a>
             </div>{" "}
-            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none">
+            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none border-x p-2 rounded-md w-[10%] text-center">
               <a href="#projects">Projects</a>
             </div>{" "}
-            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none">
+            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none border-x p-2 rounded-md w-[10%] text-center">
               <a href="#about">Contact</a>
             </div>
           </div>
         </nav>
-        <aside className="w-3 h-[90vh] bg-purple-100 ml-[25vw] mt-[2rem] rounded relative ">
-          <div className="rounded-md w-[3rem] h-[1.5rem] absolute top-4 left-21 border-red-600 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce"></div>
+        <img src=".\1.jpg" className="w-full min-h-full"/>
+        <aside className="w-3 h-screen bg-purple-100 ml-[25vw] mt-1 rounded relative ">
+      
+        <div className=" absolute p-0 top-0 right-[30px] rounded-full w-[20vw] h-[10vh] " ><img src=".\136089755 (1) (1).png" className="bg-transparent rounded-full " /></div> 
+        <div className="absolute p-0 top-0 left-[30px] rounded-full w-[40vw] h-[10vh] leading-loose text-xl text-white">
+         A hard-working developer who craves knowledge and enjoys learning. Shifted career because I'm passionate about coding which I believe is the future communication language.
+        </div>
+          
+          <div className="rounded-md w-[3rem] h-[1.5rem] absolute top-[35%] left-21 border-red-600 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce"></div>
           <ul
-            className=" flex flex-col rounded absolute font-mono text-left left-20 top-0  text-purple-100 font-extrabold text-[1.5rem]  w-[40vw]"
+            className=" flex flex-col rounded absolute font-mono text-left left-20 top-[34%]  text-purple-100 font-extrabold text-[1.5rem]  w-[40vw]"
             id="about"
             onClick={hadleShowAbout}
           >
             About Me{" "}
             {showAbout && (
+              <> <TypeAnimation
+                sequence={[
+                  "My name is Hala-حلا-,I Saw this world for the first time on 27th of July 1997,and loved it!",
+                
+  
+                ]}
+                wrapper="div"
+                speed={45}
+                deletionSpeed={45}
+                className="text-xl text-amber-200 font-semibold bg-black-950/50	  rounded-md"
+                repeat={Infinity}
+              />
               <TypeAnimation
                 sequence={[
-                  "My name is Hala,I Saw this world for the first time on 27th of July 1997,and loved it!",
-                  1500,
+                 
                   "I always dream big ,and work hard to get what I want..",
-                  1500,
+                
 
+                 
+                ]}
+                wrapper="div"
+                speed={45}
+                deletionSpeed={45}
+                className="text-xl text-amber-200 font-semibold bg-black-950/50	  rounded-md"
+                repeat={Infinity}
+              />
+                 <TypeAnimation
+                sequence={[
+                 
                   "I am a Front-End Developer",
                   1000,
                   "I am a Back-End Developer",
@@ -153,6 +189,17 @@ function App() {
 
                   "I am a Full-Stack Developer  ",
                   1000,
+                 
+                ]}
+                wrapper="div"
+                speed={45}
+                deletionSpeed={45}
+                className="text-xl text-amber-200 font-semibold bg-black-950/50	  rounded-md"
+                repeat={Infinity}
+              />
+                 <TypeAnimation
+                sequence={[
+                
                   "You can see that I love programming! Check my portfolio if you are not sure yet!",
                   1500,
                 ]}
@@ -162,29 +209,36 @@ function App() {
                 className="text-xl text-amber-200 font-semibold bg-black-950/50	  rounded-md"
                 repeat={Infinity}
               />
+                 
+              </>
             )}
           </ul>
-          <div className="rounded-md w-[3rem] h-[1.5rem] absolute top-[50%] left-21 border-red-600 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce"></div>
+          <div className="rounded-md w-[3rem] h-[1.5rem] absolute top-[70%] left-21 border-red-600 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce"></div>
 
           <ul
-            className="rounded absolute font-mono text-left left-20 top-[48%] text-purple-100 font-extrabold text-[1.5rem]   w-[40vw]"
+            className="rounded absolute font-mono text-left left-20 top-[69%] text-purple-100 font-extrabold text-[1.5rem]   w-[40vw]"
             id="projects"
-            onClick={hadleShowProjects}
+           
           >
-            My Projects{" "}
+           <span  onClick={hadleShowProjects} >My Projects</span> {" "}
             {showProjects && (
               <ul className=" flex gap-2 flex-col list-none text-xl text-yellow-200 cursor-none ">
-                <li className="hover:tracking-widest hover:text-yellow-300">
-                  <a href="#p1">Test Your Memory</a>
+                <li className=" hover:text-yellow-300 cursor-none bg-transparent">
+
+                  <a href="#p1" onClick={handleShowp1}>Test Your Memory</a>
+                
+                
+
+         
                 </li>
-                <li className="hover:tracking-widest  hover:text-yellow-300">
+                <li className="hover:tracking-widest  hover:text-yellow-300 cursor-none">
                   <a href="#p2">My Task Manager</a>
                 </li>
-                <li className="hover:tracking-widest  hover:text-yellow-300">
+                <li className="hover:tracking-widest  hover:text-yellow-300 cursor-none">
                   {" "}
                   <a href="#p3">Easy Knowledge</a>
                 </li>
-                <li className="hover:tracking-widest  hover:text-yellow-300">
+                <li className="hover:tracking-widest  hover:text-yellow-300 cursor-none">
                   {" "}
                   <a href="#p4">Cure App</a>
                 </li>
@@ -192,9 +246,9 @@ function App() {
             )}
           </ul>
 
-          <div className="rounded-md w-[3rem] h-[1.5rem] absolute bottom-[5%] left-21 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce "></div>
+          <div className="rounded-md w-[3rem] h-[1.5rem] absolute bottom-[2%] left-21 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce "></div>
           <ul
-            className="rounded absolute font-mono text-left bottom-[3%]  left-20 text-purple-100 font-extrabold text-[1.5rem]   w-[40vw]"
+            className="rounded absolute font-mono text-left bottom-[1%]  left-20 text-purple-100 font-extrabold text-[1.5rem]   w-[40vw] cursor-none"
             id="contact"
             onClick={()=>{
               hadleShowContact()
@@ -288,7 +342,7 @@ function App() {
                     sequence={[
                       "setMessage(true)",
                       1500,
-                      "{message ? <p> Thank you for contacting,your message was sent successfully </p> : <p> You are always welcome to share your thoughts </p>}",
+                      "{message ? Thank you for contacting,your message was sent successfully : You are always welcome to share your thoughts}",
                       1500,
                     ]}
                     wrapper="div"
@@ -303,6 +357,7 @@ function App() {
             </div>
           </div>
         )}
+      
       </div>
     </>
   );
