@@ -51,11 +51,10 @@ function App() {
   const hadleShowContact = () => {
     setShowcontact(!showContact);
   };
-  const handleShowp1=()=>{
-    setShowp1(!showp1)
-    console.log(showp1)
-
-  }
+  const handleShowp1 = () => {
+    setShowp1(!showp1);
+    console.log(showp1);
+  };
   const hadleShowProjects = () => {
     setShowProjects(!showProjects);
     console.log(showProjects);
@@ -75,11 +74,11 @@ function App() {
   return (
     <>
       <div
-        className="grid-cols-1 App"
+        className="grid-cols-1 h-full App"
         style={{ minHeight: "100vh", minWidth: "100vw" }}
         onMouseMove={changePosition}
       >
-        <div className="bubbles">
+        <div className="bubbles ">
           <span id="s1"></span>
           <span id="s3"></span>
           <span id="s5"></span>
@@ -126,90 +125,80 @@ function App() {
         <nav className="flex items-center justify-evenly   p-8 font-semibold  md:font-light font-mono text-lg md:text-xl  text-purple-100 cursor-none border-b-2 border-indigo-50 ">
           <div className="w-full block justify-between flex-grow sm:flex sm:items-center sm:w-auto  cursor-none   ">
             <div className="block mt-4 sm:inline-block sm:mt-0">logo</div>
-            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50  animate-pulse  hover:animate-none border-x p-2 rounded-md w-[10%] text-center">
-              <a href="#about">About</a>
+            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50  animate-pulse  hover:animate-none w-[10%] text-center">
+              <a className="border-x rounded-md p-2" href="#about">
+                About
+              </a>
             </div>{" "}
-            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none border-x p-2 rounded-md w-[10%] text-center">
-              <a href="#projects">Projects</a>
+            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none  w-[10%] text-center">
+              <a className="border-x p-2 rounded-md" href="#projects">
+                Projects
+              </a>
             </div>{" "}
-            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none border-x p-2 rounded-md w-[10%] text-center">
-              <a href="#about">Contact</a>
+            <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none  w-[10%] text-center">
+              <a className="border-x p-2 rounded-md" href="#about">
+                Contact
+              </a>
             </div>
           </div>
         </nav>
-        <img src=".\1.jpg" className="w-full min-h-full"/>
-        <aside className="w-3 h-screen bg-purple-100 ml-[25vw] mt-1 rounded relative ">
-      
-        <div className=" absolute p-0 top-0 right-[30px] rounded-full w-[20vw] h-[10vh] " ><img src=".\136089755 (1) (1).png" className="bg-transparent rounded-full " /></div> 
-        <div className="absolute p-0 top-0 left-[30px] rounded-full w-[40vw] h-[10vh] leading-loose text-xl text-white">
-         A hard-working developer who craves knowledge and enjoys learning. Shifted career because I'm passionate about coding which I believe is the future communication language.
+        <div className="w-full h-screen"><img className="h-full w-full" src=".\1.jpg" />
+        
+        
+        
+        
+        
         </div>
-          
+        
+        <aside className="w-3 h-screen bg-purple-100 ml-[25vw] mt-1 rounded relative ">
+          <div className=" absolute p-0 top-0 right-[30px] rounded-full w-[20vw] h-[10vh] ">
+            <img
+              src=".\136089755 (1) (1).png"
+              className="bg-transparent rounded-full "
+            />
+          </div>
+          <div className="absolute p-0 top-[10%] left-[30px] rounded-full w-[40vw] h-4/5  leading-loose text-xl text-white">
+            A hard-working developer who craves knowledge and enjoys learning.
+            Shifted career because I'm passionate about coding which I believe
+            is the future communication language.
+          </div>
+
           <div className="rounded-md w-[3rem] h-[1.5rem] absolute top-[35%] left-21 border-red-600 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce"></div>
           <ul
-            className=" flex flex-col rounded absolute font-mono text-left left-20 top-[34%]  text-purple-100 font-extrabold text-[1.5rem]  w-[40vw]"
+            className=" flex flex-col rounded absolute font-mono text-left left-20 top-[34%]  text-purple-100 font-extrabold text-[1.5rem]  w-[60vw]"
             id="about"
             onClick={hadleShowAbout}
           >
             About Me{" "}
             {showAbout && (
-              <> <TypeAnimation
-                sequence={[
-                  "My name is Hala-حلا-,I Saw this world for the first time on 27th of July 1997,and loved it!",
+              <>
+                {" "}<TypeAnimation
+                  sequence={[
+                    "I am a Front-End Developer",
+                    1500,
+                    "I am a Back-End Developer",
+                    1500,
+                    "I am a Full-Stack Developer  ",
+                    1500,
+                  ]}
+                  wrapper="div"
+                  speed={45}
+                  deletionSpeed={70}
+                  cursor={false}
+                  className="text-xl text-green-400 font-semibold bg-black-950/50	mt-2 w-[100%] rounded-md"
+                  repeat={Infinity}
+                />
+                <TypeAnimation
+                  sequence={[
+                    "My name is Hala-حلا-,I Saw this world for the first time on 27th of July 1997,and loved it!I always dream big ,and work hard to get what I want.. You can see that I love programming! Check my portfolio if you are not sure yet!",
+                  ]}
+                  wrapper="div"
+                  speed={45}
+                  deletionSpeed={70}
+                  className="text-xl text-amber-200 font-semibold bg-black-950/50	mt-2 w-[100%] rounded-md"
+                  repeat={0}
+                />
                 
-  
-                ]}
-                wrapper="div"
-                speed={45}
-                deletionSpeed={45}
-                className="text-xl text-amber-200 font-semibold bg-black-950/50	  rounded-md"
-                repeat={Infinity}
-              />
-              <TypeAnimation
-                sequence={[
-                 
-                  "I always dream big ,and work hard to get what I want..",
-                
-
-                 
-                ]}
-                wrapper="div"
-                speed={45}
-                deletionSpeed={45}
-                className="text-xl text-amber-200 font-semibold bg-black-950/50	  rounded-md"
-                repeat={Infinity}
-              />
-                 <TypeAnimation
-                sequence={[
-                 
-                  "I am a Front-End Developer",
-                  1000,
-                  "I am a Back-End Developer",
-                  1000,
-
-                  "I am a Full-Stack Developer  ",
-                  1000,
-                 
-                ]}
-                wrapper="div"
-                speed={45}
-                deletionSpeed={45}
-                className="text-xl text-amber-200 font-semibold bg-black-950/50	  rounded-md"
-                repeat={Infinity}
-              />
-                 <TypeAnimation
-                sequence={[
-                
-                  "You can see that I love programming! Check my portfolio if you are not sure yet!",
-                  1500,
-                ]}
-                wrapper="div"
-                speed={45}
-                deletionSpeed={45}
-                className="text-xl text-amber-200 font-semibold bg-black-950/50	  rounded-md"
-                repeat={Infinity}
-              />
-                 
               </>
             )}
           </ul>
@@ -218,18 +207,14 @@ function App() {
           <ul
             className="rounded absolute font-mono text-left left-20 top-[69%] text-purple-100 font-extrabold text-[1.5rem]   w-[40vw]"
             id="projects"
-           
           >
-           <span  onClick={hadleShowProjects} >My Projects</span> {" "}
+            <span onClick={hadleShowProjects}>My Projects</span>{" "}
             {showProjects && (
               <ul className=" flex gap-2 flex-col list-none text-xl text-yellow-200 cursor-none ">
                 <li className=" hover:text-yellow-300 cursor-none bg-transparent">
-
-                  <a href="#p1" onClick={handleShowp1}>Test Your Memory</a>
-                
-                
-
-         
+                  <a href="#p1" onClick={handleShowp1}>
+                    Test Your Memory
+                  </a>
                 </li>
                 <li className="hover:tracking-widest  hover:text-yellow-300 cursor-none">
                   <a href="#p2">My Task Manager</a>
@@ -250,9 +235,9 @@ function App() {
           <ul
             className="rounded absolute font-mono text-left bottom-[1%]  left-20 text-purple-100 font-extrabold text-[1.5rem]   w-[40vw] cursor-none"
             id="contact"
-            onClick={()=>{
-              hadleShowContact()
-              setThank(false)
+            onClick={() => {
+              hadleShowContact();
+              setThank(false);
             }}
           >
             <a href="#contactMe"> Contact Me </a>
@@ -282,7 +267,6 @@ function App() {
                 ref={form}
                 onSubmit={sendEmail}
               >
-                
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="relative z-0">
                     <input
@@ -318,7 +302,6 @@ function App() {
                     <textarea
                       name="message"
                       rows="5"
-                      
                       className="peer block w-full appearance-none border-0 border-b border-gray-200 bg-transparent py-2.5 px-0  text-violet-100 text-lg focus:border-indigo-200 focus:outline-focus focus:ring-0 cursor-none"
                       placeholder=" "
                       onChange={(e) => {
@@ -338,7 +321,8 @@ function App() {
                 >
                   Send Message
                 </button>
-                {thank&&name&&email&&<TypeAnimation
+                {thank && name && email && (
+                  <TypeAnimation
                     sequence={[
                       "setMessage(true)",
                       1500,
@@ -351,13 +335,11 @@ function App() {
                     className="mt-3  text-lg text-emerald-400 font-normal bg-transparent"
                     repeat={Infinity}
                   />
-                  }
+                )}
               </form>
-          
             </div>
           </div>
         )}
-      
       </div>
     </>
   );
