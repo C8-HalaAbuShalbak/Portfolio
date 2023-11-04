@@ -205,16 +205,76 @@ function App() {
             id="projects"
           >
             <span onClick={hadleShowProjects}>My Projects</span>{" "}
-          
+            {showp1 && (
+              <a
+                href=""
+                class="transition-opacity ease-in duration-700 opacity-70 hover:opacity-100 group  relative bottom-0 block h-full  text-black"
+              >
+                <span class="  absolute inset-0 border-2 border-dashed border-amber-150"></span>
+
+                <div class="  relative flex  transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+                  <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class=" h-50 w-50 sm:h-12 sm:w-12"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    
+                      stroke="indigo"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+
+                    <h2 class="mt-4 text-xl font-medium sm:text-2xl">
+                      Your Task Manager
+                    </h2>
+                  </div>
+
+                  <div class="absolute flex flex-col gap-1 p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8 w-[60vw] min-h-fit">
+                    <h3 class="mt-4 text-xl font-medium sm:text-2xl">
+                    Your Task Manager
+                    </h3>
+<span><strong>Description</strong></span><br/>
+                    <p class="mt-4 text-sm sm:text-sm">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cupiditate, praesentium voluptatem omnis atque culpa
+                      repellendus.
+                    </p>
+                    <span><strong>Deployment Link</strong></span><br/>
+                    <a href="Lorem ipsum dolor sit amet consectetur adipisicing elit." class=" block mt-4 text-sm sm:text-base">
+                      
+                      Your Task Manager
+                      
+                    </a>
+                    <span><strong>Demo Video</strong></span><br/>
+                    <iframe src="https://www.youtube.com/embed/lkIFF4maKMU?si=HDTG425mr_eh2oBl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "allowfullscreen="ture"  sandbox="true" class="mt-4 text-sm sm:text-base"/>
+                      
+                    <p>
+                      <strong>Technologies</strong>
+
+                    </p>
+
+
+                  </div>
+                </div>
+              </a>
+            )}
             {showProjects && (
               <ul className=" flex gap-2 flex-col list-none text-xl text-yellow-200 cursor-none ">
-                <li className="grid grid-cols-2 w-[50vw] hover:text-yellow-300 cursor-none bg-transparent">
+                {/* <li className="grid grid-cols-2 w-[50vw] hover:text-yellow-300 cursor-none bg-transparent">
                   <a href="#p1" onClick={handleShowp1}>
                     Test Your Memory
                   </a>
-                </li>
+                </li> */}
                 <li className="  hover:tracking-widest  hover:text-yellow-300 cursor-none">
-                  <a href="#p2">My Task Manager</a>
+                  <a href="#p2" onClick={handleShowp1}>
+                    My Task Manager
+                  </a>
                 </li>
                 <li className="hover:tracking-widest  hover:text-yellow-300 cursor-none">
                   {" "}
@@ -337,89 +397,45 @@ function App() {
             </div>
           </div>
         )}
-      </div> {showp1 && (
-              <a
-                href=""
-                class="  transition-opacity ease-in duration-700 opacity-70 hover:opacity-100 group z-40 relative bottom-0 block h-full sm:h-80 lg:h-96"
-              >
-                <span class="absolute inset-0 border-2 border-dashed border-black"></span>
-
-                <div class="relative flex h-full transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
-                  <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-10 w-10 sm:h-12 sm:w-12"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-
-                    <h2 class="mt-4 text-xl font-medium sm:text-2xl">
-                      Go around the world
-                    </h2>
-                  </div>
-
-                  <div class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
-                    <h3 class="mt-4 text-xl font-medium sm:text-2xl">
-                      Go around the world
-                    </h3>
-
-                    <p class="mt-4 text-sm sm:text-base">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Cupiditate, praesentium voluptatem omnis atque culpa
-                      repellendus.
-                    </p>
-
-                    <p class="mt-8 font-bold">Read more</p>
-                  </div>
-                </div>
-              </a>
-            )} 
+      </div>
       <div className="bubbles ">
-          <span id="s1"></span>
-          <span id="s3"></span>
-          <span id="s5"></span>
-          <span id="s7"></span>
-          <span id="s2"></span>
-          <span id="s1"></span>
-          <span id="s3"></span>
-          <span id="s3"></span>
-          <span id="s4"></span>
-          <span id="s5"></span>
-          <span id="s6"></span>
-          <span id="s7"></span>
-          <span id="s8"></span>
-          <span id="s9"></span>
-          <span id="s10"></span>
-          <span id="s11"></span>
-          <span id="s12"></span>
-          <span id="s13"></span>
-          <span id="s14"></span>
-          <span id="s2"></span>
-          <span id="s4"></span>
-          <span id="s3"></span>
-          <span id="s6"></span>
-          <span id="s5"></span>
-          <span id="s8"></span>
-          <span id="s9"></span>
-          <span id="s11"></span>
-          <span id="s9"></span>
-          <span id="s3"></span>
-          <span id="s7"></span>
-          <span id="s12"></span>
-          <span id="s5"></span>
-          <span id="s13"></span>
-          <span id="s9"></span>
-          <span id="s11"></span>
-          <span id="s7"></span>
-        </div>
+        <span id="s1"></span>
+        <span id="s3"></span>
+        <span id="s5"></span>
+        <span id="s7"></span>
+        <span id="s2"></span>
+        <span id="s1"></span>
+        <span id="s3"></span>
+        <span id="s3"></span>
+        <span id="s4"></span>
+        <span id="s5"></span>
+        <span id="s6"></span>
+        <span id="s7"></span>
+        <span id="s8"></span>
+        <span id="s9"></span>
+        <span id="s10"></span>
+        <span id="s11"></span>
+        <span id="s12"></span>
+        <span id="s13"></span>
+        <span id="s14"></span>
+        <span id="s2"></span>
+        <span id="s4"></span>
+        <span id="s3"></span>
+        <span id="s6"></span>
+        <span id="s5"></span>
+        <span id="s8"></span>
+        <span id="s9"></span>
+        <span id="s11"></span>
+        <span id="s9"></span>
+        <span id="s3"></span>
+        <span id="s7"></span>
+        <span id="s12"></span>
+        <span id="s5"></span>
+        <span id="s13"></span>
+        <span id="s9"></span>
+        <span id="s11"></span>
+        <span id="s7"></span>
+      </div>
     </>
   );
 }
