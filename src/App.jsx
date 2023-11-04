@@ -116,7 +116,6 @@ function App() {
           <span id="s11"></span>
           <span id="s7"></span>
         </div> */}
-
         <div className="cursor-style delay-[500]" ref={cursor}>
           <div className="inner-cursor-style " ref={innerCursor}>
             {" "}
@@ -126,49 +125,58 @@ function App() {
           <div className="w-full block justify-between flex-grow sm:flex sm:items-center sm:w-auto  cursor-none   ">
             <div className="block mt-4 sm:inline-block sm:mt-0">logo</div>
             <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50  animate-pulse  hover:animate-none w-[10%] text-center">
-              <a className="border-x rounded-md p-2" href="#about">
+              <a
+                className="border-x rounded-xl p-2 "
+                href="#about"
+                onClick={hadleShowAbout}
+              >
                 About
               </a>
             </div>{" "}
             <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none  w-[10%] text-center">
-              <a className="border-x p-2 rounded-md" href="#projects">
+              <a className="border-x p-2 rounded-xl" href="#projects">
                 Projects
               </a>
             </div>{" "}
             <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none  w-[10%] text-center">
-              <a className="border-x p-2 rounded-md" href="#about">
+              <a className="border-x p-2 rounded-xl" href="#about">
                 Contact
               </a>
             </div>
           </div>
         </nav>
-        <div className="w-full h-screen">
-          <img className="h-full w-full" src=".\1.jpg" />
+        <div>
+          <img className="h-[90vh] w-full" src=".\1.jpg" />
         </div>
-
-        <aside className="w-3 min-h-screen bg-purple-100 ml-[25vw] mt-1 rounded relative ">
+        <aside className="w-3 h-[500vh] bg-purple-100 ml-[25vw] mt-1 rounded relative ">
           <div className=" absolute p-0 top-0 right-[30px] rounded-full w-[20vw] h-[10vh] ">
             <img
               src=".\136089755 (1) (1).png"
               className="bg-transparent rounded-full "
             />
           </div>
-          <div className="absolute p-0 top-[10%] left-[30px] rounded-full w-[40vw] h-4/5  leading-loose text-xl text-white">
-            A hard-working developer who craves knowledge and enjoys learning.
-            Shifted career because I'm passionate about coding which I believe
-            is the future communication language.
+          <div className=" absolute p-0 top-10 left-7 rounded-full w-screen">
+            <p className="  w-3/5 leading-normal text-lg lg:text-2xl md:leading-loose md:w-2/5 md:h-full text-white ">
+              {" "}
+              A hard-working developer who craves knowledge and enjoys learning.
+              Shifted career because I'm passionate about coding which I believe
+              is the future communication language.
+            </p>
           </div>
 
-          <div className="rounded-md w-[3rem] h-[1.5rem] absolute top-[35%] left-21 border-red-600 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce"></div>
+          <div className="rounded-md w-[3rem] h-[1.5rem] absolute top-[11.5%] left-21 border-red-600 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce"></div>
           <ul
-            className=" flex flex-col rounded absolute font-mono text-left left-20 top-[34%]  text-purple-100 font-extrabold text-[1.5rem]  w-[60vw]"
+            className=" flex flex-col rounded absolute font-mono text-left left-20 top-[11%]  text-purple-100 font-extrabold text-[1.5rem] md:w-[35vw] "
             id="about"
             onClick={hadleShowAbout}
           >
-            About Me{" "}
+            <span className="border-x w-fit rounded-xl p-2 shadow-md shadow-white mb-3">
+              About Me{" "}
+            </span>
+
             {showAbout && (
               <>
-                {" "}
+                {" "}<div className="w-screen md:w-screen">
                 <TypeAnimation
                   sequence={[
                     "I am a Front-End Developer",
@@ -182,9 +190,10 @@ function App() {
                   speed={45}
                   deletionSpeed={70}
                   cursor={false}
-                  className="text-xl text-green-400 font-semibold bg-black-950/50	mt-2 w-[100%] rounded-md"
+                  className="text-xl block text-green-400 font-semibold bg-black-950/50	mt-2 w-5/6 rounded-md h-[3rem]"
                   repeat={Infinity}
                 />
+                
                 <TypeAnimation
                   sequence={[
                     "My name is Hala-حلا-,I Saw this world for the first time on 27th of July 1997,and loved it!I always dream big ,and work hard to get what I want.. You can see that I love programming! Check my portfolio if you are not sure yet!",
@@ -192,80 +201,26 @@ function App() {
                   wrapper="div"
                   speed={45}
                   deletionSpeed={70}
-                  className="text-xl text-amber-200 font-semibold bg-black-950/50	mt-2 w-[100%] rounded-md"
+                  className="text-xl text-amber-200 font-semibold bg-black-950/50	mt-2 w-3/5  lg:w-2/5 rounded-md"
                   repeat={0}
-                />
+                /></div>
               </>
             )}
           </ul>
-          <div className="rounded-md w-[3rem] h-[1.5rem] absolute top-[70%] left-21 border-red-600 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce"></div>
+          <div className="rounded-md w-[3rem] h-[1.5rem] absolute top-[30%] md:top-[21%] left-21 border-red-600 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce"></div>
 
           <ul
-            className="rounded absolute font-mono text-left left-20 top-[69%] text-purple-100 font-extrabold text-[1.5rem]   w-[40vw]"
+            className="rounded absolute font-mono text-left left-20 top-[30%] md:top-[21%] text-purple-100 font-extrabold text-[1.5rem]  w-[40vw]"
             id="projects"
           >
-            <span onClick={hadleShowProjects}>My Projects</span>{" "}
-            {showp1 && (
-              <a
-                href=""
-                class="transition-opacity ease-in duration-700 opacity-70 hover:opacity-100 group  relative bottom-0 block h-full  text-black"
-              >
-                <span class="  absolute inset-0 border-2 border-dashed border-amber-150"></span>
-
-                <div class="  relative flex  transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
-                  <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class=" h-50 w-50 sm:h-12 sm:w-12"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    
-                      stroke="indigo"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-
-                    <h2 class="mt-4 text-xl font-medium sm:text-2xl">
-                      Your Task Manager
-                    </h2>
-                  </div>
-
-                  <div class="absolute flex flex-col gap-1 p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8 w-[60vw] min-h-fit">
-                    <h3 class="mt-4 text-xl font-medium sm:text-2xl">
-                    Your Task Manager
-                    </h3>
-<span><strong>Description</strong></span><br/>
-                    <p class="mt-4 text-sm sm:text-sm">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Cupiditate, praesentium voluptatem omnis atque culpa
-                      repellendus.
-                    </p>
-                    <span><strong>Deployment Link</strong></span><br/>
-                    <a href="Lorem ipsum dolor sit amet consectetur adipisicing elit." class=" block mt-4 text-sm sm:text-base">
-                      
-                      Your Task Manager
-                      
-                    </a>
-                    <span><strong>Demo Video</strong></span><br/>
-                    <iframe src="https://www.youtube.com/embed/lkIFF4maKMU?si=HDTG425mr_eh2oBl" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "allowfullscreen="ture"  sandbox="true" class="mt-4 text-sm sm:text-base"/>
-                      
-                    <p>
-                      <strong>Technologies</strong>
-
-                    </p>
-
-
-                  </div>
-                </div>
-              </a>
-            )}
+            <span
+              onClick={hadleShowProjects}
+              className=" block border-x w-fit rounded-xl p-2 shadow-md shadow-white mb-7"
+            >
+              My Projects
+            </span>{" "}
             {showProjects && (
-              <ul className=" flex gap-2 flex-col list-none text-xl text-yellow-200 cursor-none ">
+              <ul className=" grid grid-rows-4 list-none text-xl text-yellow-200 cursor-none ">
                 {/* <li className="grid grid-cols-2 w-[50vw] hover:text-yellow-300 cursor-none bg-transparent">
                   <a href="#p1" onClick={handleShowp1}>
                     Test Your Memory
@@ -287,6 +242,7 @@ function App() {
               </ul>
             )}
           </ul>
+         
 
           <div className="rounded-md w-[3rem] h-[1.5rem] absolute bottom-[2%] left-21 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce "></div>
           <ul
@@ -297,13 +253,37 @@ function App() {
               setThank(false);
             }}
           >
-            <a href="#contactMe"> Contact Me </a>
+            <a
+              href="#contactMe"
+              className=" block border-x w-fit rounded-xl p-2 shadow-md shadow-white mt-2"
+            >
+              Contact Me
+            </a>
           </ul>
         </aside>
+        
+          <footer className="bg-white fixed bottom-0 z-40 h-3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+            aspernatur perspiciatis magni molestiae sint quisquam fuga, unde
+            dolores. Voluptatem facilis fugiat, impedit tempore accusamus
+            laboriosam cumque distinctio dolorem dolor fuga? Cum dolor hic autem
+            quisquam eveniet nostrum beatae inventore. Eum temporibus a porro
+            laboriosam ratione dolore quo id tempore expedita illum at animi
+            cum, sit aspernatur velit? Nesciunt, molestias architecto!
+            Reiciendis, voluptates eum! Dolores, itaque vel perspiciatis esse
+            laudantium accusantium recusandae iure minima praesentium aspernatur
+            cumque nemo quidem dolorem, consequuntur omnis ratione ut hic sequi
+            delectus magni inventore quod. Ex. Voluptatem nulla ipsa tempora
+            consequatur repellendus ipsam, nam error corporis dicta maiores
+            exercitationem dolores minus, recusandae quaerat facilis maxime
+            nostrum corrupti beatae soluta tenetur. In cupiditate optio laborum?
+            Soluta, enim.
+          </footer>
+        
         {showContact && (
           <div
             id="contactMe"
-            className="flex min-h-screen rounded-lg m-auto  items-center w-[50vw] justify-self-center justify-center bg-none text-white shadow-lg shadow-white cursor-none"
+            className="flex h-screen rounded-lg m-auto  items-center w-[80vw] justify-self-center justify-center bg-none text-white shadow-lg shadow-white cursor-none"
           >
             <div className="mx-auto w-full max-w-lg">
               <p className="mt-1 mb-3 text-lg">
@@ -398,6 +378,7 @@ function App() {
           </div>
         )}
       </div>
+
       <div className="bubbles ">
         <span id="s1"></span>
         <span id="s3"></span>
@@ -441,3 +422,77 @@ function App() {
 }
 
 export default App;
+/*  <div id="projects" className="grid grid-cols-3 px-1">
+             {showp1 && (
+          <a
+            href=""
+            className="transition-opacity ease-in duration-700 opacity-70 hover:opacity-100 group  relative bottom-0 block max-h-fit  text-black"
+          >
+            <span className="absolute inset-0 border-2 border-dashed border-amber"></span>
+
+            <div className=" relative flex  transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
+              <div className="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className=" h-50 w-50 sm:h-12 sm:w-12"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="indigo"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+
+                <h2 className="mt-4 text-xl font-medium sm:text-2xl">
+                  Your Task Manager
+                </h2>
+              </div>
+
+              <div className="absolute flex flex-col gap-1 p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8 w-[60vw] min-h-fit">
+                <h3 className="mt-4 text-xl font-medium sm:text-2xl">
+                  Your Task Manager
+                </h3>
+                <span>
+                  <strong>Description</strong>
+                </span>
+                <br />
+                <p className="mt-4 text-sm sm:text-sm">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cupiditate, praesentium voluptatem omnis atque culpa
+                  repellendus.
+                </p>
+                <span>
+                  <strong>Deployment Link</strong>
+                </span>
+                <br />
+                <a
+                  href="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                  className=" block mt-4 text-sm sm:text-base"
+                >
+                  Your Task Manager
+                </a>
+                <span>
+                  <strong>Demo Video</strong>
+                </span>
+                <br />
+                <iframe
+                  src="https://www.youtube.com/embed/lkIFF4maKMU?si=HDTG425mr_eh2oBl"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
+                  allowfullscreen="ture"
+                  sandbox="true"
+                  className="mt-4 text-sm sm:text-base"
+                />
+
+                <p>
+                  <strong>Technologies</strong>
+                </p>
+              </div>
+            </div>
+          </a>
+        )}
+          <div id="p2"></div>{" "}
+       </div>{" "} */
