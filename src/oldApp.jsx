@@ -74,44 +74,7 @@ function App() {
   return (
     <>
       <div className=" h-screen w-screen App" onMouseMove={changePosition}>
-        {/* <div className="bubbles ">
-          <span id="s1"></span>
-          <span id="s3"></span>
-          <span id="s5"></span>
-          <span id="s7"></span>
-          <span id="s2"></span>
-          <span id="s1"></span>
-          <span id="s3"></span>
-          <span id="s3"></span>
-          <span id="s4"></span>
-          <span id="s5"></span>
-          <span id="s6"></span>
-          <span id="s7"></span>
-          <span id="s8"></span>
-          <span id="s9"></span>
-          <span id="s10"></span>
-          <span id="s11"></span>
-          <span id="s12"></span>
-          <span id="s13"></span>
-          <span id="s14"></span>
-          <span id="s2"></span>
-          <span id="s4"></span>
-          <span id="s3"></span>
-          <span id="s6"></span>
-          <span id="s5"></span>
-          <span id="s8"></span>
-          <span id="s9"></span>
-          <span id="s11"></span>
-          <span id="s9"></span>
-          <span id="s3"></span>
-          <span id="s7"></span>
-          <span id="s12"></span>
-          <span id="s5"></span>
-          <span id="s13"></span>
-          <span id="s9"></span>
-          <span id="s11"></span>
-          <span id="s7"></span>
-        </div> */}
+      
         <div className="cursor-style delay-[500] " ref={cursor}>
           <div className="inner-cursor-style " ref={innerCursor}></div>
         </div>

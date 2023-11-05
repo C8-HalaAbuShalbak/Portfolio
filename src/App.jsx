@@ -122,6 +122,11 @@ const App = () => {
         <span id="s11"></span>
         <span id="s7"></span>
       </div>
+      {/* <div className=" h-screen w-screen App" onMouseMove={changePosition}>
+      
+      <div className="cursor-style delay-[500] " ref={cursor}>
+        <div className="inner-cursor-style " ref={innerCursor}></div>
+     </div> </div> */}
       {/* <==========================HEADER===================================> */}
       <header className="grid grid-rows-1 mb-2">
         <nav className="flex items-center justify-evenly   p-6 md:font-semibold  font-light font-mono text-md md:text-xl gap-1  text-purple-100 cursor-none border-b-2 border-indigo-50 h-full ">
@@ -137,7 +142,7 @@ const App = () => {
               </a>
             </div>{" "}
             <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none  w-[10%] text-center">
-              <a className="md:border-x p-2 rounded-xl" href="#projects">
+              <a className="md:border-x p-2 rounded-xl" href="#Myprojects">
                 Projects
               </a>
             </div>{" "}
@@ -231,7 +236,7 @@ const App = () => {
         <div className="rounded-md w-[3rem] h-[1.5rem] absolute top-[65%] left-21 border-red-600 text-purple-100 font-extrabold text-[2rem] bg-purple-50 animate-bounce"></div>
         <ul
           className="rounded absolute font-mono text-left left-20 top-[65%]  text-purple-100 font-extrabold text-[1.5rem]  w-[40vw]"
-          id="projects"
+          id="Myprojects"
         >
           <span
             onClick={handleShowProjects}
@@ -242,15 +247,21 @@ const App = () => {
           {showProjects && (
             <ul className=" mt-5 felx flex-col gap-2 list-none text-xl text-yellow-200 cursor-none ">
               <li className="  hover:tracking-widest  hover:text-yellow-300 cursor-none">
-                <a href="#projects" onClick={handleshowpcards}>My Task Manager</a>
+                <a href="#projects" onClick={handleshowpcards}>
+                  My Task Manager
+                </a>
               </li>
               <li className="hover:tracking-widest  hover:text-yellow-300 cursor-none">
                 {" "}
-                <a href="#projects" onClick={handleshowpcards}>Easy Knowledge</a>
+                <a href="#projects" onClick={handleshowpcards}>
+                  Easy Knowledge
+                </a>
               </li>
               <li className="hover:tracking-widest  hover:text-yellow-300 cursor-none">
                 {" "}
-                <a href="#projects" onClick={handleshowpcards}>Cure App</a>
+                <a href="#projects" onClick={handleshowpcards}>
+                  Cure App
+                </a>
               </li>
             </ul>
           )}
@@ -276,84 +287,193 @@ const App = () => {
         </ul>
         {/* /* >===================PART FOUR==================< */}
       </aside>
-      {showpcards&&
-      <section
-        id="projects"
-        className="bg-yellow-200 h-[70vh] grid  grid-cols-1 md:grid-cols-3 mt-2 p-3"
-      >
-        <div>
-          <a
-            href="p1"
-            className="transition-opacity ease-in duration-700 opacity-70 hover:opacity-100 group  relative bottom-0   text-black"
-          >
-            <span className="absolute inset-0 border-2 border-dashed border-black"></span>
+      {showpcards && (
+        <section
+          id="projects"
+          className="bg-slate/90 h-[70vh] grid gap-1 grid-cols-1 md:grid-cols-3 mt-2 p-3"
+        >
+          <div>
+            <a
+              href="p1"
+              className="transition-opacity ease-in duration-700 opacity-70 hover:opacity-100 group  relative bottom-0   text-black"
+            >
+              <span className="absolute inset-0 border-2 border-dashed border-white"></span>
 
-            <div className=" relative   transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 justify-center ">
-              <div className="flex flex-col gap-2 h-96 p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8 justify-center  align-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className=" h-50 w-50 sm:h-12 sm:w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="indigo"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-
-                <h2 className="text-xl font-medium sm:text-2xl">
-                  My Task Manager
-                </h2>
-              </div>
-
-              <div className="absolute felx flex-col gap-1 p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8 w-full h-96">
-                {/* <h3 className="mt-4 text-xl font-medium sm:text-2xl">
-                 My Task Manager
-                </h3> */}
-                <p className=" col-start-1 col-end-2">
-                  <strong>Description</strong>
-                  <p className=" text-sm sm:text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cupiditate, praesentium voluptatem omnis atque culpa
-                    repellendus.
-                  </p>
-                </p>
-
-                <p>
-                  <strong>Deployment Link</strong>
-
-                  <a
-                    href="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-                    className=" mt-1 text-sm sm:text-base"
+              <div className=" relative   transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 justify-center ">
+                <div className="flex flex-col gap-2 h-96 p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8 justify-center  align-middle">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className=" h-50 w-50 sm:h-12 sm:w-12"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="indigo"
                   >
-                    Your Task Manager
-                  </a>
-                </p>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
 
-                <span>
-                  <strong>Demo Video</strong>
-                </span>
-                <br />
-                <iframe
-                  src="https://www.youtube.com/embed/lkIFF4maKMU?si=HDTG425mr_eh2oBl"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
-                  allowfullscreen="ture"
-                  sandbox="true"
-                  className="mt-4 text-sm sm:text-base"
-                  width="100%"
-                  height="50%"
-                />
+                  <h2 className="text-xl font-medium sm:text-2xl">
+                    My Task Manager
+                  </h2>
+                </div>
+
+                <div className="absolute felx flex-col gap-1 p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8 w-full h-96">
+                  <p className=" col-start-1 col-end-2">
+                    <strong>Description</strong>
+                    <p className=" text-sm sm:text-sm">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cupiditate, praesentium voluptatem omnis atque culpa
+                      repellendus.
+                    </p>
+                  </p>
+
+                  <p>
+                    <strong>Deployment Link</strong>
+
+                    <a
+                      href="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                      className=" mt-1 text-sm sm:text-base"
+                    >
+                      Your Task Manager
+                    </a>
+                  </p>
+
+                  <span>
+                    <strong>Demo Video</strong>
+                  </span>
+                  <br />
+                  <iframe
+                    src="https://www.youtube.com/embed/lkIFF4maKMU?si=HDTG425mr_eh2oBl"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
+                    allowfullscreen="ture"
+                    sandbox="true"
+                    className="mt-4 text-sm sm:text-base"
+                    width="100%"
+                    height="50%"
+                  />
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
-        <div></div>
-        <div></div>
-      </section>}
+            </a>
+          </div>
+          <div>
+            <a
+              href="p1"
+              className="transition-opacity ease-in duration-700 opacity-70 hover:opacity-100 group  relative bottom-0   text-black"
+            >
+              <span className="absolute inset-0 border-2 border-dashed border-white"></span>
+
+              <div className=" relative   transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 justify-center ">
+                <div className="flex flex-col gap-2 h-96 p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8 justify-center  align-middle">
+                  <img
+                    src=".\icons8-brain-100.png"
+                    className=" h-50 w-50 sm:h-12 sm:w-12"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="indigo"
+                  />
+                  
+
+                  <h2 className="text-xl font-medium sm:text-2xl">
+                    Easy Knowledge
+                  </h2>
+                </div>
+
+                <div className="absolute felx flex-col gap-1 p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8 w-full h-96">
+                  <p className=" col-start-1 col-end-2">
+                    <strong>Description</strong>
+                    <p className=" text-sm sm:text-sm">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Cupiditate, praesentium voluptatem omnis atque culpa
+                      repellendus.
+                    </p>
+                  </p>
+
+                  <p>
+                    <strong>Deployment Link</strong>
+
+                    <a
+                      href="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                      className=" mt-1 text-sm sm:text-base"
+                    >
+                      Your Task Manager
+                    </a>
+                  </p>
+
+                  <span>
+                    <strong>Demo Video</strong>
+                  </span>
+                  <br />
+                  <iframe
+                    src="https://www.youtube.com/embed/lkIFF4maKMU?si=HDTG425mr_eh2oBl"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share "
+                    allowfullscreen="ture"
+                    sandbox="true"
+                    className="mt-4 text-sm sm:text-base"
+                    width="100%"
+                    height="50%"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a
+              href="p1"
+              className="transition-opacity ease-in duration-700 opacity-70 hover:opacity-100 group  relative bottom-0   text-black"
+            >
+              <span className="absolute inset-0 border-2 border-dashed border-white"></span>
+
+              <div className=" relative   transform items-end border-2 border-black bg-white transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 justify-center ">
+                <div className="flex flex-col gap-2 h-96 p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8 justify-center  align-middle">
+                  <img
+                    src=".\Provider (1).jpg"
+                    className=" h-50 w-50 sm:h-12 sm:w-12"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="indigo"
+                  />
+                   
+
+                  <h2 className="text-xl font-medium sm:text-2xl">
+                   Cure App
+                  </h2>
+                </div>
+
+                <div className="absolute felx flex-col gap-2 p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8 w-full h-96">
+                  <p className=" col-start-1 col-end-2">
+                    <strong>Description</strong>
+                    <p className=" text-sm sm:text-sm">
+                    Team Full stack web application,the application provides home medical specialized services besides general personal services.
+                    </p>
+                  </p>
+
+                  <p>
+                    <strong>Deployment Link:</strong>
+                   
+
+                    <a
+                      href="https://65380cdc9958bf0097b05849--bejewelled-alpaca-3369ed.netlify.app/"
+                      className=" mt-1 text-sm sm:text-base  text-indigo-600 underline"
+                    >
+                      Cure App
+                    </a>
+                  </p>
+
+                  <span>
+                    <strong>Demo Video</strong>
+                  </span>
+                  <br />
+                  <iframe width="100%" height="50%" src="https://www.youtube.com/embed/2a3Oxq4uooE?si=eSxMMZ1M7VEVbucG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+      )}
       {showContact && (
         <div
           id="contactMe"
@@ -486,6 +606,7 @@ const App = () => {
           </ul>
         </section>
       </footer>
+
       {/* >==========================FOOTER===================================< */}
     </>
   );
