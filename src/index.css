@@ -3,7 +3,7 @@ body{
     background-color: black;
     overflow-x: hidden;
     /* cursor: none; */
-    height: 100vh;
+    /* height: 100vh; */
   }
   .App {
     cursor: none;
@@ -117,7 +117,7 @@ animation-delay: 3s;
   }
  100%
   {
-    transform: translateY(0vh) scale(0.25);
+    transform: translateY(0vh) scale(0.5);
   }
 }
 @tailwind base;

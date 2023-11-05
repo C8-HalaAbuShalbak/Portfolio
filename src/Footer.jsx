@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-<footer className="  bottom-0  z-40 text-white grid grid-cols-1 md:grid-cols-4 md:h-38 w-screen justify-between bg-indigo-800 p-3">
+<footer className=" bottom-0 mt-12 text-white grid grid-cols-1 md:grid-cols-4 md:h-38 w-screen justify-between bg-indigo-800/50 p-3">
         <section
-          id="skills"
+          id="Myskills"
           className=" md:col-start-1 md:col-end-4 md:grid grid-cols-3 gap-1"
         >
           <div >
