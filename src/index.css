@@ -3,6 +3,7 @@ body{
     background-color: rgb(20, 16, 21);
     overflow-x: hidden;
     cursor: none;
+    height: 100vh;
   }
   .App {
     cursor: none;
@@ -112,11 +113,11 @@ animation-delay: 3s;
 @keyframes animate {
   0%
   {
-    transform: translateY(100vh) scale(1);
+    transform: translateY(300vh) scale(1.2);
   }
  100%
   {
-    transform: translateY(-10vh) scale(0);
+    transform: translateY(0vh) scale(0.5);
   }
 }
 @tailwind base;
