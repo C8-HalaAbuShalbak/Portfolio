@@ -164,7 +164,7 @@ function App() {
           <ul
             className=" flex flex-col rounded absolute font-mono text-left left-20 top-[25%]  text-purple-100 font-extrabold text-[1.5rem] md:w-[35vw] "
             id="about"
-            onClick={hadleShowAbout}
+            onClick={handleShowAbout}
           >
             <span className="border-x w-fit rounded-xl p-2 shadow-md shadow-white mb-3">
               About Me{" "}
