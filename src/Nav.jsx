@@ -38,16 +38,17 @@ const Nav = () => {
             Projects
           </a>
         </div>{" "}
+         <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none  w-[10%] text-center">
+          <a className="md:border-x p-2 border-indigo-300 rounded-xl" href="#skills">
+            Skills
+          </a>
+        </div>
         <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none  w-[10%] text-center">
           <a className="md:border-x p-2  border-indigo-300 rounded-xl" href="#contactMe">
             Contact
           </a>
         </div>
-        <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none  w-[10%] text-center">
-          <a className="md:border-x p-2 border-indigo-300 rounded-xl" href="#skills">
-            Skills
-          </a>
-        </div>
+       
       </div>
     </nav>
   );
