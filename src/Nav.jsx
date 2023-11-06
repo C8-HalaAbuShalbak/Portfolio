@@ -21,7 +21,7 @@ const Nav = () => {
 
 
   return (
-    <nav className="flex items-center justify-evenly   p-6 md:font-semibold  font-light font-mono text-md md:text-xl gap-1  text-purple-100 cursor-none mb-2  h-full ">
+    <nav className="flex items-center justify-evenly  py-1 p-4 md:font-semibold  font-light font-mono text-md md:text-xl gap-1  text-purple-100 cursor-none mb-0  h-1/4 ">
       <div className="w-full  block justify-around md:flex-grow sm:flex sm:items-center sm:w-auto  cursor-none   ">
         <div className="block mt-4 sm:inline-block sm:mt-0">logo</div>
         <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50  animate-pulse  hover:animate-none w-[10%] text-center">

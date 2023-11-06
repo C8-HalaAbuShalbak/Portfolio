@@ -7,10 +7,10 @@ body{
   }
   .App {
     cursor: none;
-   /* width:100%; */
-   /* height: 100vh; */
+   width:100vw;
+   height: 100vh;
    /* overflow: hidden; */
-   /* position: relative; */
+   position: relative;
   }
   #s1{
    --v:11;
@@ -91,9 +91,9 @@ body{
   height: 10px;
   border-radius: 50%;
   background: rgba(190, 14, 114, 0.63);
-  box-shadow: 0 100px rgba(108, 83, 97, 0.772),
+  box-shadow: 0 100px rgba(239, 201, 223, 0.772),
   100px 150px  rgb(174, 70, 174),
-  0 0 50px rgba(209, 229, 181, 0.592);
+  0 0 50px rgba(192, 96, 240, 0.592);
   animation: animate 15s linear infinite;
   opacity: .7;
 animation-duration:calc(125s/ var(--v)) ;
@@ -101,10 +101,10 @@ animation-delay: 1s;
 
 }
 .bubbles span:nth-child(even){
-  background: rgb(222, 162, 222);
-  box-shadow: 0 100px rgba(61, 84, 161, 0.612),
-  150px 100px rgb(155, 199, 8),
-  0 0 50px rgb(232, 246, 163);
+  background: rgb(231, 226, 231);
+  box-shadow: 0 100px rgba(202, 89, 236, 0.612),
+  150px 100px rgb(113, 6, 83)
+  0 0 50px rgb(73, 3, 73);
   animation: animate 15s linear infinite;
   opacity: .7;
   animation-duration:calc(150s/ var(--v)) ;

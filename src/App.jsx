@@ -76,7 +76,8 @@ const App = () => {
   return (
     <> 
      
-      <div className="relative">
+      <div className="">
+         <div className="App" onMouseMove={changePosition}>
         <Nav/>
         <div className="bubbles">
           <span id="s1"></span>
@@ -116,20 +117,21 @@ const App = () => {
           <span id="s11"></span>
           <span id="s7"></span>
         </div>
+        
      <Header/>
      <MainContent/>
         
-        {/* <div className=" h-screen w-screen App" onMouseMove={changePosition}>
-      
-      <div className="cursor-style delay-[500] " ref={cursor}>
-        <div className="inner-cursor-style " ref={innerCursor}></div>
-     </div> </div> */}
+        
        
 
      
      
             <Contact/>
         <Footer />
+      <div className="cursor-style " ref={cursor}>
+        <div className="inner-cursor-style " ref={innerCursor}></div>
+     </div> </div> 
+      
         </div>
     </>
   );
