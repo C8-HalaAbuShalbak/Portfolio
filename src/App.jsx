@@ -9,13 +9,7 @@ const App = () => {
   //CURSOR=================>
   const cursor = useRef(null);
   const innerCursor = useRef(null);
-  // const [Xcoor, setXcoor] = useState(0);
-  // const [Ycoor, setYcoor] = useState(0);
-  //<=====================CURSOR
 
-  //HANDLE FUNCTIONS===============>
-
-  //  console.log("aaaaaaaaa")
   useEffect(() => {
     const changePosition = (e) => {
       cursor.current.style.top = `${e.clientY}px`;
@@ -36,9 +30,11 @@ const App = () => {
 
   return (
     <>
-      <div className="">
-        <div className="App">
+   
+      <div className="App">
+        <div >
           <Nav />
+          <Header /> 
           <div className="bubbles">
             <span id="s1"></span>
             <span id="s3"></span>
@@ -77,9 +73,10 @@ const App = () => {
             <span id="s11"></span>
             <span id="s7"></span>
           </div>
-          <Header />
+         
           <MainContent />
           <Contact />
+          
           <Footer />
           <div className="cursor-style" ref={cursor}>
             <div className="inner-cursor-style" ref={innerCursor}></div>

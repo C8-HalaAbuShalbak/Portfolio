@@ -9,30 +9,49 @@ body{
     cursor: none;
    width:100vw;
    height: 100vh;
-   /* overflow: hidden; */
    position: relative;
   }
-  dialog[open] {
-    animation: appear .15s cubic-bezier(0, 1.8, 1, 1.8);
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 200; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(214, 214, 214); /* Fallback color */
+    background-color: rgba(201, 196, 196, 0.4); /* Black w/ opacity */
   }
   
-    dialog::backdrop {
-      background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(54, 54, 54, 0.5));
-      backdrop-filter: blur(3px);
-    }
-    
-   
-  @keyframes appear {
-    from {
-      opacity: 0;
-      transform: translateX(-3rem);
-    }
+  /* Modal Content */
+  .modal-content {
+    background-color: transparent;
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+    height: fit-content;
+  }
   
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  } 
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+   
+
+  
   #s1{
    --v:11;
   }
@@ -85,7 +104,7 @@ body{
     transform: translate(10%, 10%);
     position: fixed;
     pointer-events: none;
-    z-index: 1;
+    z-index: 300;
     
   }
  
@@ -134,7 +153,7 @@ animation-delay: 3s;
 @keyframes animate {
   0%
   {
-    transform: translateY(250vh) scale(1);
+    transform: translateY(100vh) scale(1);
   }
  100%
   {

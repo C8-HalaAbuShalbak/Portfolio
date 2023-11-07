@@ -21,7 +21,7 @@ const Nav = () => {
 
 
   return (
-    <nav className="flex items-center justify-evenly  py-1 p-4 md:font-semibold  font-light font-mono text-md md:text-xl gap-1  text-purple-100 cursor-none mb-0  h-1/4 ">
+    <nav className="flex items-center justify-evenly  py-6 p-4 md:font-semibold  font-light font-mono text-md md:text-xl gap-1  text-purple-100 cursor-none mb-1  h-1/2 ">
       <div className="w-full  block justify-around md:flex-grow sm:flex sm:items-center sm:w-auto  cursor-none   ">
         <div className="block mt-4 sm:inline-block sm:mt-0">logo</div>
         <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50  animate-pulse  hover:animate-none w-[10%] text-center">
@@ -39,7 +39,7 @@ const Nav = () => {
           </a>
         </div>{" "}
          <div className="block mt-4 sm:inline-block sm:mt-0  hover:text-purple-50 animate-pulse  hover:animate-none  w-[10%] text-center">
-          <a className="md:border-x p-2 border-indigo-300 rounded-xl" href="#skills">
+          <a className="md:border-x p-2 border-indigo-300 rounded-xl" href="#Myskills">
             Skills
           </a>
         </div>

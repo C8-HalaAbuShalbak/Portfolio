@@ -33,10 +33,11 @@ const Contact = () => {
   };
   return (
     <div
-      id="contactMe"
+      
       className="flex h-screen  rounded-lg m-auto  items-center w-[90vw]  bg-none text-white shadow-lg shadow-white "
     >
-      <div className="mx-auto w-full max-w-lg">
+   
+      <div id="contactMe" className="mx-auto w-full max-w-lg">
        
         <h1 className="text-4xl font-medium mb-7">Contact Me</h1>
 
@@ -51,13 +52,13 @@ const Contact = () => {
                 type="text"
                 name="name"
                 required
-                className="peer block w-full appearance-none border-0 border-b border-gray-200 bg-transparent py-2.5 px-0  text-violet-100 text-lg focus:border-indigo-200 focus:outline-focus focus:ring-0 cursor-none"
+                className="peer block w-full appearance-none border-0 border-b border-gray-200 bg-transparent py-2.5 px-1  text-violet-100 text-lg focus:outline-indigo-400  focus:outline-focus focus:ring-0 cursor-none"
                 placeholder=" "
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
               />
-              <label className="absolute top-0 -z-10 origin-[0] -translate-y-6 scale-0 transform text-md font-normal text-gray-100/75 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-yellow-400 peer-focus:dark:text-yellow-100">
+              <label className="absolute top-0 -z-10 origin-[0] -translate-y-6 scale-0 transform text-md font-normal text-gray-100/75 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-indigo-400 peer-focus:dark:text-yellow-100 ">
                 Your name
               </label>
             </div>
@@ -66,13 +67,13 @@ const Contact = () => {
                 type="text"
                 name="email"
                 required
-                className="peer block w-full appearance-none border-0 border-b border-gray-200 bg-transparent py-2.5 px-0  text-violet-100 text-lg focus:border-indigo-200 focus:outline-focus focus:ring-0 cursor-none"
+                className="peer block w-full appearance-none border-0 border-b border-gray-200 bg-transparent py-2.5 px-1  text-violet-100 text-lg focus:outline-indigo-400 focus:outline-focus focus:ring-0 cursor-none"
                 placeholder=" "
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
               />
-              <label className="absolute top-0 -z-10 origin-[0] -translate-y-6 scale-0 transform text-md font-normal text-gray-100/75 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-yellow-400 peer-focus:dark:text-yellow-100">
+              <label className="absolute top-0 -z-10 origin-[0] -translate-y-6 scale-0 transform text-md font-normal text-gray-100/75 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-indigo-400 peer-focus:dark:text-yellow-100">
                 Your email
               </label>
             </div>
@@ -80,13 +81,13 @@ const Contact = () => {
               <textarea
                 name="message"
                 rows="5"
-                className="peer block w-full appearance-none border-0 border-b border-gray-200 bg-transparent py-2.5 px-0  text-violet-100 text-lg focus:border-indigo-200 focus:outline-focus focus:ring-0 cursor-none"
+                className="peer block w-full appearance-none border-0 border-b border-indigo-200 bg-transparent py-2.5 px-1  text-violet-100 text-lg focus:outline-indigo-400 focus:outline-focus focus:ring-0 cursor-none"
                 placeholder=" "
                 onChange={(e) => {
                   setMessage(e.target.value);
                 }}
               ></textarea>
-              <label className="absolute top-0 -z-10 origin-[0] -translate-y-6 scale-0 transform text-md font-normal text-gray-100/75 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-yellow-400 peer-focus:dark:text-yellow-100">
+              <label className="absolute top-0 -z-10 origin-[0] -translate-y-6 scale-0 transform text-md font-normal text-gray-100/75 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-indigo-400 peer-focus:dark:text-yellow-100">
                 Your message
               </label>
             </div>
@@ -103,18 +104,19 @@ const Contact = () => {
             <TypeAnimation
               sequence={[
 
-                " Thank you for contacting.You are always welcome to share your thoughts",
+                " Thank you for contacting!You are always welcome to share your thoughts",
                 1500,
               ]}
               wrapper="div"
               speed={45}
               deletionSpeed={45}
-              className="mt-3 h-2/5 text-lg text-emerald-400 font-normal bg-transparent"
+              className="mt-3  h-full text-lg text-emerald-500 font-normal bg-transparent w-full leading-5"
               repeat={Infinity}
             />
           )}
         </form>
       </div>
+  
     </div>
   );
 };
