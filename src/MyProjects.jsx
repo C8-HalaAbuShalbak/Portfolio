@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PopUp from "./PopUp";
-import Modle from "./Modle";
 const MyProjects = () => {
   const [showProjects, setShowProjects] = useState(false);
     const [popProject, setPopProject] = useState(null);
@@ -15,8 +14,9 @@ const MyProjects = () => {
       src: "./icons8-brain-100.png",
       title: "Easy Knowledge",
       description:
-        "    A solo built full-stack web application that provides E-learning services for a learner and an instructor.",
-      deployment: "",
+        "A solo built full-stack web application that provides E-learning services for a learner and an instructor.",
+      deployment: "easy-knowledge.netlify.app",
+      repo:"https://github.com/C8-HalaAbuShalbak/MERAKI_Academy_Project_4.git",
       video: "",
     },
     {
@@ -26,6 +26,7 @@ const MyProjects = () => {
       description:
         " Team Full stack web application,the application provides home medical specialized services besides general personal services.",
       deployment: "https://bejewelled-alpaca-3369ed.netlify.app/",
+      repo:"https://github.com/Girl-Power2/MERAKI_Academy_Project_5.git",
       video: "https://www.youtube.com/embed/2a3Oxq4uooE?si=8m94Ea41Isbht5gd",
     },
   ];

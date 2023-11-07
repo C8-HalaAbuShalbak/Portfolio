@@ -4,10 +4,12 @@ import {
   BsGithub,
   BsFileEarmarkPdf,
   BsLinkedin,
+
+  
 } from "react-icons/bs";
+import{AiOutlineMail}from "react-icons/ai"
 import{ SiVite,
   SiTailwindcss,SiReact} from "react-icons/si"
-import { AiOutlineMail } from "react-icons/ai";
 const Footer = () => {
   const CustomClass =
     "inline text-[2rem] border-2 border-indigo-600 shadow-sm shadow-gray-50 rounded-full p-1 text-indigo-400 ";
@@ -32,7 +34,7 @@ const Footer = () => {
           <BsLinkedin className={CustomClass} />
           hala-joudehabushalbak
         </a>
-        <a className="hover:animate-pulse underline" className="hover:animate-pulse"  className="hover:animate-pulse" href="mailto:halaj.abushalbak@gmail.com">
+        <a className="hover:animate-pulse underline"  href="mailto:halaj.abushalbak@gmail.com">
           <AiOutlineMail className={CustomClass} />
           halaj.abushalbak@gmail.com
         </a>
@@ -43,6 +45,8 @@ const Footer = () => {
         <p><SiReact className="inline"/>React</p>
         <p><SiVite className="inline"/>Vite</p>
         <p><SiTailwindcss className="inline"/> Tailwind-CSS</p>
+        <p><AiOutlineMail className="inline"/> Email JS</p>
+
       </div>
       <div className="flex flex-col gap-2 text-md justify-evenly  ">
         <strong>Useful Links</strong>

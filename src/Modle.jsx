@@ -3,7 +3,7 @@ import React from "react";
 const Modle = ({ project }) => {
   return (
     <div>
-      <div className=" m-auto group relative block h-64 sm:h-80 lg:h-96 w-full md:w-1/2 ">
+      <div className=" m-auto group relative block h-64 sm:h-80 lg:h-96 w-full md:w-1/2 text-sm">
         <span className="absolute inset-0 border-2 border-dashed border-indigo-100 rounded-md"></span>
 
         <div
@@ -30,8 +30,11 @@ const Modle = ({ project }) => {
             </h3>
 
             <p className="mt-4 text-sm sm:text-base">{project.description}</p>
-            <p className="text-md font-medium">Deployment Link</p>
-            <label className="text-md font-medium ">
+            <p className=" font-medium">Deployment Link</p>
+            <a href={project.deployment} target="blank" className="block text-md underline">{project.title}-deployed</a>
+            <p className="font-medium">Github Repo</p>
+            <a href={project.repo} target="blank" className="block text-md underline">{project.title}-github</a>
+            <label className="font-medium ">
               Demo Video
               <embed
                 width="90%"
