@@ -22,7 +22,10 @@ const MainContent = () => {
   const [showAbout, setShowAbout] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
   const [showSkills, setShowSkills] = useState(false);
-  const [n, setn] = useState(-1);
+
+  const [showSkillBe, setShowSkillsBe] = useState(false);
+  const [showSkillsFe, setShowSkillsFe] = useState(false);
+
 
   const skills = {
     backend: [
@@ -30,7 +33,6 @@ const MainContent = () => {
         skill: "MongoDb",
         icon: <SiMongodb className="inline" />,
         category: "b.e",
-        index: n,
       },
       {
         skill: "PostgreSQL",
@@ -63,7 +65,6 @@ const MainContent = () => {
         skill: "Vite",
         icon: <SiVite className="inline" />,
         category: "f.e",
-        category: "f.e",
       },
       { skill: "React", icon: <FaReact className="inline" />, category: "f.e" },
       { skill: "Redux", icon: <SiRedux className="inline" />, category: "f.e" },
@@ -85,16 +86,21 @@ const MainContent = () => {
   const handleShowAbout = () => {
     setShowAbout(!showAbout);
   };
+  const handleShowSkillsBe = () => {
+    setShowSkillsBe(!showSkillBe);
+  };
   const handleShowSkills = () => {
     setShowSkills(!showSkills);
   };
-
+  const handleShowSkillsFe = () => {
+    setShowSkillsFe(!showSkillsFe);
+  };
   const handleShowProjects = () => {
     setShowProjects(!showProjects);
   };
   return (
     <>
-      <aside className="w-3 min-h-[120vh] bg-purple-100 m-2 md:ml-[25vw]  rounded relative mb-[50vh] ">
+      <aside className="w-3 min-h-[120vh] bg-purple-100 m-2 md:ml-[25vw]  rounded relative mb-[70vh] ">
         <div className=" absolute p-0 top-0 sm:right-12   rounded-full w-[20vw] h-48 ">
           {/* <==========================PART ONE===================================> */}
           <img
@@ -196,9 +202,13 @@ const MainContent = () => {
           >
             My Skills
           </span>
-          <div>
+          {showSkills&&
+          <section className=" text-sm  grid grid-cols-1 md:grid-cols-2 md:text-xl mt-10">
+          <div className="flex flex-col">
+            
             <p className="text-blue-500">{"<backend>"}</p>
-            {showSkills &&
+            <p onClick={handleShowSkillsBe}>...</p>
+            {showSkillBe &&
               skills.backend.map((skill) => {
                 return (
                   <MySkills key={skill.skill} tech={skill} icon={skill.icon} />
@@ -207,9 +217,10 @@ const MainContent = () => {
             <p className="text-blue-500">{"</backend>"}</p>
           </div>
           {/* =======================FE====================== */}
-          <div>
+          <div className="grid grid-cols-1 md:grid-cols-2  ">
             <p className="text-blue-500">{"<frontend>"}</p>
-            {showSkills &&
+            <p onClick={handleShowSkillsFe}>...</p>
+            {showSkillsFe &&
               skills.frontend.map((skill) => {
                 return (
                   <MySkills key={skill.skill} tech={skill} icon={skill.icon} />
@@ -217,6 +228,7 @@ const MainContent = () => {
               })}
             <p className="text-blue-500">{"</frontend>"}</p>
           </div>
+          </section>}
         </ul>
         {/* /* >===================PART FOUR==================< */}
       </aside>
