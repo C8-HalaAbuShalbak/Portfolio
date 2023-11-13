@@ -17,7 +17,7 @@ const MyProjects = () => {
         "A solo built full-stack web application that provides E-learning services for a learner and an instructor.",
       deployment: "https://easy-knowledge.netlify.app/",
       repo:"https://github.com/C8-HalaAbuShalbak/MERAKI_Academy_Project_4.git",
-      video: "",
+      video: "https://www.youtube.com/embed/m04h1GzMiNc?si=Rm7IQ19OFqj_JPB7",
     },
     {
       id: "cure",
