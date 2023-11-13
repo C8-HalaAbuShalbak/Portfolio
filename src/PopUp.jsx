@@ -13,6 +13,12 @@ const PopUp = ({popProject,setPopProject}) => {
  const display=()=>{
       modal.current.style.display="block"  
     }
+    window.onclick = function(event) {
+      console.log(event.target.id)
+      if (event.target.id === "myModal") {
+        modal.current.style.display = "none";
+      }
+    }
   const modal = useRef(null);
   return (
     <>
@@ -25,7 +31,7 @@ const PopUp = ({popProject,setPopProject}) => {
               {setPopProject}(null)
             }}
           >
-            <FaRegWindowClose className="text-white hover:text-indigo-200 rounded-md"/>
+            <FaRegWindowClose className="text-white w-11 hover:w-12 cursor:none hover:cursor-none hover:text-indigo-200 rounded-md"/>
           </span>
           <Modle project={popProject}/>
         </div>

@@ -2,8 +2,7 @@
 body{
     background-color: black;
     overflow-x: hidden;
-    /* cursor: none; */
-    /* height: 100vh; */
+   
   }
   .App {
     cursor: none;
@@ -13,23 +12,23 @@ body{
   }
 
   .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 200; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    position: fixed; 
+    z-index: 200; 
+    padding-top: 100px; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(214, 214, 214); /* Fallback color */
-    background-color: rgba(201, 196, 196, 0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(214, 214, 214);
+    background-color: rgba(201, 196, 196, 0.4); 
   }
   
   /* Modal Content */
   .modal-content {
     background-color: transparent;
-    margin: auto;
+    margin: 0 auto;
     padding: 20px;
     width: 100%;
     height: fit-content;

@@ -4,11 +4,11 @@ const Modle = ({ project }) => {
   return (
     <div>
       <div className=" m-auto group relative block h-64 sm:h-80 lg:h-96 w-full md:w-1/2 text-sm">
-        <span className="absolute inset-0 border-2 border-dashed border-indigo-100 rounded-md"></span>
+        <span className="absolute h-max  inset-0 border-2 border-dashed border-indigo-100 rounded-md">
 
         <div
           id={project.id}
-          className="relative flex h-full transform items-center border-2 border-black bg-indigo-50 transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2 align-middle  justify-center rounded-md p-4 hover:shadow-md hover:shadow-white"
+          className="relative flex flex-wrap transform items-center border-2 border-black bg-indigo-50 transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2 align-middle  justify-center rounded-md p-4 hover:shadow-md hover:shadow-white"
         >
           <div className="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8  w-full rounded-md  ">
             <img
@@ -49,7 +49,7 @@ const Modle = ({ project }) => {
               ></embed>
             </label>
           </div>
-        </div>
+        </div></span>
       </div>
     </div>
   );
