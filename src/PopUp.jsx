@@ -4,7 +4,6 @@ import "./index.css";
 import Modle from "./Modle"
 
 const PopUp = ({popProject,setPopProject}) => {
-    console.log(popProject)
  useEffect(() => {
     display()
     
@@ -14,7 +13,6 @@ const PopUp = ({popProject,setPopProject}) => {
       modal.current.style.display="block"  
     }
     window.onclick = function(event) {
-      console.log(event.target.id)
       if (event.target.id === "myModal") {
         modal.current.style.display = "none";
       }
