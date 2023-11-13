@@ -12,7 +12,6 @@ const PopUp = ({popProject,setPopProject}) => {
  }, [popProject])
  const display=()=>{
       modal.current.style.display="block"  
-      console.log(modal.current.style.display)
     }
   const modal = useRef(null);
   return (
