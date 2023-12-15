@@ -29,7 +29,7 @@ const Footer = () => {
           <BsGithub className={CustomClass} />
           HalaAbuShalbak
         </a>
-        <a className="hover:animate-pulse" href="https://www.linkedin.com/in/hala-joudehabushalbak/">
+        <a className="hover:animate-pulse" href="https://www.linkedin.com/in/halaabushalbak/">
           {" "}
           <BsLinkedin className={CustomClass} />
           hala-joudehabushalbak

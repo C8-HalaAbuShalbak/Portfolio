@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PopUp from "./PopUp";
 const MyProjects = () => {
   const [showProjects, setShowProjects] = useState(false);
-    const [popProject, setPopProject] = useState(null);
+  const [popProject, setPopProject] = useState(null);
 
   const handleShowProjects = () => {
     setShowProjects(!showProjects);
@@ -16,7 +16,7 @@ const MyProjects = () => {
       description:
         "A solo built full-stack web application that provides E-learning services for a learner and an instructor.",
       deployment: "https://easy-knowledge.netlify.app/",
-      repo:"https://github.com/C8-HalaAbuShalbak/MERAKI_Academy_Project_4.git",
+      repo: "https://github.com/C8-HalaAbuShalbak/MERAKI_Academy_Project_4.git",
       video: "https://www.youtube.com/embed/m04h1GzMiNc?si=Rm7IQ19OFqj_JPB7",
     },
     {
@@ -26,7 +26,7 @@ const MyProjects = () => {
       description:
         " Team Full stack web application,the application provides home medical specialized services besides general personal services.",
       deployment: "https://bejewelled-alpaca-3369ed.netlify.app/",
-      repo:"https://github.com/Girl-Power2/MERAKI_Academy_Project_5.git",
+      repo: "https://github.com/Girl-Power2/MERAKI_Academy_Project_5.git",
       video: "https://www.youtube.com/embed/2a3Oxq4uooE?si=8m94Ea41Isbht5gd",
     },
   ];
@@ -44,23 +44,17 @@ const MyProjects = () => {
           My Projects
         </span>{" "}
         {popProject && <PopUp popProject={popProject} />}
-
         {showProjects &&
           projects.map((project) => {
-      
             return (
               <li className="mt-3 md:hover:tracking-widest  hover:text-indigo-400 cursor-none">
                 <button
                   onClick={() => {
                     setPopProject(project);
-                 
-                   
                   }}
                 >
                   {project.title}
                 </button>
-
-               
               </li>
             );
           })}
