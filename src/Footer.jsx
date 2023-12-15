@@ -17,7 +17,7 @@ const Footer = () => {
     <footer className=" flex  bottom-0 mt-12 text-indigo-100  md:h-38 w-screen justify-around  border-t-2  ">
       <div className="flex flex-col gap-2 text-md  justify-center ">
         <strong>Contact</strong>
-        <a  className="hover:animate-pulse" href="https://drive.google.com/file/d/1znNnwkk2DIZkAl0CsiElhbmf-7bRO0Vx/view?usp=sharing">
+        <a  className="hover:animate-pulse" href="https://drive.google.com/file/d/1_v8pLj3UCgYTmqwQsYEIXuxyI3Fz3pl-/view?usp=sharing">
           <BsFileEarmarkPdf className={CustomClass} />
           Resume
         </a>
@@ -32,7 +32,7 @@ const Footer = () => {
         <a className="hover:animate-pulse" href="https://www.linkedin.com/in/halaabushalbak/">
           {" "}
           <BsLinkedin className={CustomClass} />
-          hala-joudehabushalbak
+          halaabushalbak
         </a>
         <a className="hover:animate-pulse underline"  href="mailto:halaj.abushalbak@gmail.com">
           <AiOutlineMail className={CustomClass} />
